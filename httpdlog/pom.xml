@@ -35,6 +35,7 @@
     <module>httpdlog-inputformat</module>
     <module>httpdlog-pigloader</module>
     <module>httpdlog-serde</module>
+    <module>httpdlog-logstash</module>
   </modules>
 
   <build>
