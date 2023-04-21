@@ -1,12 +1,18 @@
 This is intended as an overview of the major changes
 
-v5.8-SNAPSHOT
+v5.9-SNAPSHOT
+===
+- Print the parsed values of a wildcard in DissectorTester::printAllPossibleValues
+
+v5.8
 ===
 - getPossiblePaths sorts the list by fieldname.
 - Removed GeoIP fields averageincome and populationdensity which are not part of any real mmdb file.
 - Dropped the already disabled Storm example
 - Fully switched to Junit 5
 - Require JDK 11 or newer to build
+- Workaround for change in Unicode CLDR(and thus Java 17): they changed the short name of "September" in Locale.UK to "Sept" which causes parse errors.
+- Fixed bug regarding escaped characters in headers.
 
 v5.7
 ===

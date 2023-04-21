@@ -27,7 +27,7 @@ import nl.basjes.parse.httpdlog.beam.TestCase;
 import nl.basjes.parse.httpdlog.dissectors.ScreenResolutionDissector;
 import nl.basjes.parse.httpdlog.dissectors.geoip.GeoIPCityDissector;
 import nl.basjes.parse.httpdlog.dissectors.geoip.GeoIPISPDissector;
-import nl.basjes.parse.record.Click;
+import nl.basjes.parse.webevents.Click;
 import org.apache.beam.sdk.coders.StringUtf8Coder;
 import org.apache.beam.sdk.testing.PAssert;
 import org.apache.beam.sdk.testing.TestPipeline;
@@ -55,7 +55,7 @@ public class TestParserDoFnAvroInline implements Serializable {
 
     public static class ClickSetter implements Builder<Click> {
 
-        Click.Builder builder = Click.newBuilder();
+        final Click.Builder builder = Click.newBuilder();
 
         @Field("TIME.EPOCH:request.receive.time.epoch")             public void setRequestReceiveTime(Long value)       { builder.setTimestamp(value);                          }
 

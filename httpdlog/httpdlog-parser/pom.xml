@@ -15,15 +15,13 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <artifactId>httpdlog</artifactId>
     <groupId>nl.basjes.parse.httpdlog</groupId>
-    <version>5.8-SNAPSHOT</version>
+    <version>5.9-SNAPSHOT</version>
   </parent>
 
   <artifactId>httpdlog-parser</artifactId>
@@ -31,8 +29,9 @@
   <url>https://niels.basjes.nl</url>
 
   <properties>
-    <antlr.version>4.9.3</antlr.version>
-    <jackson.version>2.13.1</jackson.version>
+    <antlr.version>4.12.0</antlr.version>
+    <jackson.version>2.14.2</jackson.version>
+    <jackson-databind.version>2.14.2</jackson-databind.version>
   </properties>
 
   <dependencies>
@@ -67,7 +66,7 @@
     <dependency>
       <groupId>com.maxmind.geoip2</groupId>
       <artifactId>geoip2</artifactId>
-      <version>3.0.0</version>
+      <version>4.0.1</version>
       <exclusions>
         <exclusion>
           <groupId>commons-codec</groupId>
@@ -97,7 +96,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>${jackson.version}</version>
+      <version>${jackson-databind.version}</version>
     </dependency>
 
     <dependency>
